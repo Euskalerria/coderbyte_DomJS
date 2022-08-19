@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Exercise</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // WE CREATE THE ELEMENTS ON THE DOM
+        const title = document.createElement('h1');
+        title.innerText = "Counter: ";
+
+        const total = document.createElement('h3');
+        total.id = "counter";
+        total.innerHTML = 0;
+
+        const button = document.createElement('button');
+        button.innerText = "Add";
+
+        // WE CREATE THE EVENT HANDLER
+        button.addEventListener("click", function(){
+            let i = parseInt(document.getElementById("counter").innerText) + 1;
+            total.innerText = i;
+        });
+
+        // WE APPEND THE ELEMENTS
+        document.body.append(title);
+        document.body.append(total);
+        document.body.append(button);
+        
+    </script>
+</body>
+</html>
